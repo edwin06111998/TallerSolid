@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public abstract class Postre {
     
     private String sabor;
-    private double precioParcial;
-    private ArrayList<Aderezo> aderezos;
+    public double precioParcial;
+    public ArrayList<Aderezo> aderezos;
     
     public double calcularPrecioFinal(){
         double precioFinal;
