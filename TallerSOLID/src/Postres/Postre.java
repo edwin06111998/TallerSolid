@@ -5,10 +5,31 @@
  */
 package Postres;
 
+import Adicionales.Aderezo;
+import java.util.ArrayList;
+
 /**
  *
  * @author edwin
  */
-public class Postre {
+public abstract class Postre {
+    
+    private String sabor;
+    private double precioParcial;
+    private ArrayList<Aderezo> aderezos;
+    
+    public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
+    }
+
+    public ArrayList<Aderezo> getAderezos() {
+        return aderezos;
+    }
+    
+    public String showPrecioFinal(){
+        return "Precio Final: $ " + calcularPrecioFinal();
+    }
     
 }
