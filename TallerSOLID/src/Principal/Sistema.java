@@ -23,8 +23,10 @@ public class Sistema {
         
         // Producir Helado
         Helado helado_vainilla = new Helado("Vainilla");
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.CREMA);
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.FRUTILLA);
+        //OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.CREMA);
+        //OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.FRUTILLA);
+        helado_vainilla.anidirAderezo(Aderezo.CREMA);
+        helado_vainilla.anidirAderezo(Aderezo.FRUTILLA);
         System.out.println(helado_vainilla);
 //        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
         System.out.println(helado_vainilla.showPrecioFinal());

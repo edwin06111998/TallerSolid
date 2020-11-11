@@ -32,4 +32,15 @@ public abstract class Postre {
         return "Precio Final: $ " + calcularPrecioFinal();
     }
     
+    public Postre(String sabor){
+    aderezos = new  ArrayList<>();
+    this.sabor=sabor;
+    }
+    
+    public void anidirAderezo(Aderezo aderezo){
+    aderezos.add(aderezo);}
+    
+    public void quitarAderezo(Aderezo aderezo){
+    aderezos.remove(aderezo);}
+    
 }

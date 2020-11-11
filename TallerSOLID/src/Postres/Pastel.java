@@ -18,6 +18,7 @@ public class Pastel extends Postre{
     private ArrayList<Aderezo> aderezos;
     
     public Pastel(String sabor){
+        super(sabor);
         aderezos= new ArrayList<>();
         this.sabor=sabor;
         this.precioParcial = 15.55;
