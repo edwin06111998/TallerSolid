@@ -15,10 +15,26 @@ import java.util.ArrayList;
 public abstract class Postre {
     
     private String sabor;
-    public double precioParcial;
-    public ArrayList<Aderezo> aderezos;
+    private double precioParcial;
+    private ArrayList<Aderezo> aderezos;
+
+    public String getSabor() {
+        return sabor;
+    }
+
+    public void setSabor(String sabor) {
+        this.sabor = sabor;
+    }
+
+    public double getPrecioParcial() {
+        return precioParcial;
+    }
+
+    public void setPrecioParcial(double precioParcial) {
+        this.precioParcial = precioParcial;
+    }
     
-    public double calcularPrecioFinal(){
+    public  double calcularPrecioFinal(){
         double precioFinal;
         precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
         return precioFinal;
@@ -42,5 +58,10 @@ public abstract class Postre {
     
     public void quitarAderezo(Aderezo aderezo){
     aderezos.remove(aderezo);}
+
+    @Override
+    public String toString() {
+        return "Postre{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
+    }
     
 }

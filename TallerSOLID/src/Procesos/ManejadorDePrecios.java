@@ -12,24 +12,25 @@ import Postres.Pastel;
  *
  * @author USER
  */
-public class ManejadorDePrecios extends Postre {
+public class ManejadorDePrecios {
+    
 
-    public ManejadorDePrecios(String sabor) {
-        super(sabor);
-    }
-   public double calcularPrecioFinal(Object postre){
+   public  static  double calcularPrecioFinal(Object postre){
         double precioFinal;
+        Postre postre1=(Postre)postre;
+        double precioParcial=postre1.getPrecioParcial();
+        
         if(postre.getClass() == Pastel.class){
-            precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+            precioFinal=(precioParcial+(precioParcial*0.12))+(postre1.getAderezos().size()*0.50);
             return precioFinal;
         }else{
-            precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+            precioFinal=(precioParcial+(precioParcial*0.12))+(postre1.getAderezos().size()*0.50);
             return precioFinal;
         }
   
    
 }
-       public String showPrecioFinal(Object postre){
+       public static  String showPrecioFinal(Object postre){
 
         if(postre.getClass() == Pastel.class){
             return "Precio Final: $ " + calcularPrecioFinal(Pastel.class);
