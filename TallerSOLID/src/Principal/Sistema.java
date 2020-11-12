@@ -17,9 +17,6 @@ import java.util.ArrayList;
  */
 public class Sistema {
     public static void main(String [ ] args){
-        // Producir un helado de vainilla y una torta de chocolate, 
-        // a ambos agregarles CREMA y FRUTILLAS
-        // y cambiar el tipo de leche por Leche Descremada
         // Finalmente mostrar el precio final de cada uno
         // Producir un helado de vainilla y una torta de chocolate, 
         // a ambos agregarles CREMA y FRUTILLAS
@@ -40,7 +37,17 @@ public class Sistema {
             System.out.println(postre);
             mnj_leche.cambiarTipoLeche(postre);
             System.out.println(ManejadorDePrecios.showPrecioFinal(postre));
-        });        
+        });
+        
+         //Se hace el mismo procedimiento pero con leche deslactosada
+         ManejadorDeLeche mnj_leche2 = new ManejadorDeLeche(new LecheDeslactosada());
+         arrPostres.forEach(postre -> {
+             postre.anidirAderezo(new Crema());
+             postre.anidirAderezo(new Frutilla());
+             System.out.println(postre);
+             mnj_leche2.cambiarTipoLeche(postre);
+             System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
+         });
         
     }
 
