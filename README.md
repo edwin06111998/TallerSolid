@@ -7,3 +7,6 @@ viola el open closed principal , por que los metodos para las 2 claes (Pastel y 
 
 - literal 3:
 viola single resposability principle, por que se encarga del manejo del prcion final y la presentacion que la hace por la clase show. por ende crea la clase manejo de precios para que tenga solo la responsabilidad del manejo de precios
+
+- Literal 4:
+En el proyecto se viola el principio Open/Closed debido a que la clase Enum Aderezo que esta en el paquete Adicionales solo existen 3 valores los cuales sirven para identficiar cada especie de aderezo pero al momento de añadir otro aderezo a parte de los que ya existen se debe modificar la clasa Aderezo, por lo que se creo una clase Abstracta Aderezo que pueden hederar otras clases lo cual permitiria agregar aderezos sin modificar ninguna clase del proyecto
