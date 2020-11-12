@@ -46,7 +46,7 @@ public class Sistema {
              postre.anidirAderezo(new Frutilla());
              System.out.println(postre);
              mnj_leche2.cambiarTipoLeche(postre);
-             System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
+             System.out.println(ManejadorDePrecios.showPrecioFinal(postre));
          });
         
     }
