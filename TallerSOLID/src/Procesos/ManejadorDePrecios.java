@@ -33,9 +33,9 @@ public class ManejadorDePrecios {
        public static  String showPrecioFinal(Object postre){
 
         if(postre.getClass() == Pastel.class){
-            return "Precio Final: $ " + calcularPrecioFinal(Pastel.class);
+            return "Precio Final: $ " + calcularPrecioFinal(postre);
         }else{
-            return "Precio Final: $ " + calcularPrecioFinal(Helado.class);
+            return "Precio Final: $ " + calcularPrecioFinal(postre);
         }
    
 }}
