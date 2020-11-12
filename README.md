@@ -10,3 +10,6 @@ viola single resposability principle, por que se encarga del manejo del prcion f
 
 - Literal 4:
 En el proyecto se viola el principio Open/Closed debido a que la clase Enum Aderezo que esta en el paquete Adicionales solo existen 3 valores los cuales sirven para identficiar cada especie de aderezo pero al momento de añadir otro aderezo a parte de los que ya existen se debe modificar la clasa Aderezo, por lo que se creo una clase Abstracta Aderezo que pueden hederar otras clases lo cual permitiria agregar aderezos sin modificar ninguna clase del proyecto
+
+-Literal 5:
+Se viola el principio de substitución de Liskov ya que al usar la clase manejadorLeche si usamos la clase lecheDeslactosada este produce un error por lo que usamos su super clase para poder interactuar con estos y de paso manejamos el error que produce la clase lecheDeslactosada
